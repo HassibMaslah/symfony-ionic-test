@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Tab Two
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row justify-content-center>
+      <form #form="ngForm" (ngSubmit)="validate(form)">
+        <ion-card padding>
+          <ion-col>
+            <ion-label>Entrer le nom </ion-label>
+            <ion-item>
+              <ion-icon slot="start" name="body" color="secondary"></ion-icon>
+              <ion-input name="name" type="laion-label" color="secondary" placeholder="Saisir le nom " ngModel required></ion-input>
+            </ion-item>
+          </ion-col>
+        </ion-card>
+        <ion-col>
+          <div padding>
+            <ion-button size="default" type="submit" strong="true" class="authBtn" [disabled]="form.invalid" expand="block">
+              <ion-icon slot="start" name="log-in"></ion-icon>
+              Valider
+            </ion-button>
+          </div>
+        </ion-col>
+      </form>
+    </ion-row>
+  </ion-grid>
+</ion-content>
